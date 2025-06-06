@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src/main"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/sqljdbc_9.4/enu/mssql-jdbc-9.4.0.jre8.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/sqljdbc_9.4/enu/mssql-jdbc-9.4.0.jre11.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/sqljdbc_9.4/enu/mssql-jdbc-9.4.0.jre16.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/poi-5.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/poi-examples-5.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/poi-excelant-5.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/poi-javadoc-5.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/poi-ooxml-5.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/poi-ooxml-full-5.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/poi-ooxml-lite-5.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/poi-scratchpad-5.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/lib/commons-codec-1.15.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/lib/commons-collections4-4.4.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/lib/commons-io-2.11.0.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/lib/commons-math3-3.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/lib/log4j-api-2.14.1.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/lib/SparseBitSet-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/ooxml-lib/commons-compress-1.21.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/ooxml-lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/ooxml-lib/curvesapi-1.06.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/ooxml-lib/slf4j-api-1.7.32.jar"/>
+	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/ooxml-lib/xmlbeans-5.0.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
