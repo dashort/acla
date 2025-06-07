@@ -73,6 +73,7 @@ public class Import2SQL {
             default -> {
                 return null;
             }
+
         }
         if (db == null) {
             System.err.println("Database name environment variable missing for account " + account);
@@ -130,22 +131,16 @@ public class Import2SQL {
 
     private static void mapRowToStatement(Row row, PreparedStatement statement, String account) throws SQLException {
         DataFormatter formatter = new DataFormatter();
-        int columnCount = switch (account) {
-            case "537" -> 5;
-            case "903" -> 2;
-            case "218" -> 12;
-            case "115" -> 18;
-            default -> 0;
-        };
 
-        for (int i = 0; i < columnCount; i++) {
-            Cell cell = row.getCell(i, Row.MissingCellPolicy.RETURN_BLANK_AS_NULL);
+        for (Cell cell : row) {
+            int index = cell.getColumnIndex();
             String value = getCellValue(cell, formatter);
             switch (account) {
-                case "537" -> mapRow537(statement, i, value);
-                case "903" -> mapRow903(statement, i, value);
-                case "218" -> mapRow218(statement, i, cell);
-                case "115" -> mapRow115(statement, i, value);
+                case "537" -> mapRow537(statement, index, value);
+                case "903" -> mapRow903(statement, index, value);
+                case "218" -> mapRow218(statement, index, cell);
+                case "115" -> mapRow115(statement, index, value);
+
                 default -> {
                 }
             }
@@ -216,4 +211,4 @@ public class Import2SQL {
         statement.setString(columnIndex + 1, value);
     }
 }
->>>>>>> bb500479f201c5b0b636cd9283c4f25d780a2c0f
+
