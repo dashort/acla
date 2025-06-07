@@ -74,11 +74,13 @@ public class Import2SQL {
                 return null;
             }
 
+
         }
         if (db == null) {
             System.err.println("Database name environment variable missing for account " + account);
             return null;
         }
+
 
         return String.format(
             "jdbc:sqlserver://%s;database=%s;user=%s;password=%s;loginTimeout=30;",
@@ -132,6 +134,7 @@ public class Import2SQL {
     private static void mapRowToStatement(Row row, PreparedStatement statement, String account) throws SQLException {
         DataFormatter formatter = new DataFormatter();
 
+
         for (Cell cell : row) {
             int index = cell.getColumnIndex();
             String value = getCellValue(cell, formatter);
@@ -140,6 +143,7 @@ public class Import2SQL {
                 case "903" -> mapRow903(statement, index, value);
                 case "218" -> mapRow218(statement, index, cell);
                 case "115" -> mapRow115(statement, index, value);
+
 
                 default -> {
                 }
