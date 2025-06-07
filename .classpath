@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+<<<<<<< HEAD
 	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src">
 		<attributes>
 			<attribute name="optional" value="true"/>
@@ -7,6 +8,14 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src/main"/>
+=======
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-14">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+>>>>>>> bb500479f201c5b0b636cd9283c4f25d780a2c0f
 	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/sqljdbc_9.4/enu/mssql-jdbc-9.4.0.jre8.jar"/>
 	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/sqljdbc_9.4/enu/mssql-jdbc-9.4.0.jre11.jar"/>
 	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/sqljdbc_9.4/enu/mssql-jdbc-9.4.0.jre16.jar"/>
@@ -29,6 +38,7 @@
 	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/ooxml-lib/curvesapi-1.06.jar"/>
 	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/ooxml-lib/slf4j-api-1.7.32.jar"/>
 	<classpathentry kind="lib" path="D:/OneDrive/Eclipse/plugins/poi-bin-5.1.0/ooxml-lib/xmlbeans-5.0.2.jar"/>
+<<<<<<< HEAD
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -40,4 +50,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
+=======
+	<classpathentry kind="output" path="bin"/>
+>>>>>>> bb500479f201c5b0b636cd9283c4f25d780a2c0f
 </classpath>
