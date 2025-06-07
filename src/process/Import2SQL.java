@@ -73,6 +73,7 @@ public class Import2SQL {
             default -> {
                 return null;
             }
+
         }
         if (db == null) {
             System.err.println("Database name environment variable missing for account " + account);
@@ -130,6 +131,7 @@ public class Import2SQL {
 
     private static void mapRowToStatement(Row row, PreparedStatement statement, String account) throws SQLException {
         DataFormatter formatter = new DataFormatter();
+
         for (Cell cell : row) {
             int index = cell.getColumnIndex();
             String value = getCellValue(cell, formatter);
@@ -138,6 +140,7 @@ public class Import2SQL {
                 case "903" -> mapRow903(statement, index, value);
                 case "218" -> mapRow218(statement, index, cell);
                 case "115" -> mapRow115(statement, index, value);
+
                 default -> {
                 }
             }
@@ -184,13 +187,21 @@ public class Import2SQL {
         DataFormatter formatter = new DataFormatter();
         String value = getCellValue(cell, formatter);
         switch (columnIndex) {
-            case 0 -> statement.setString(1, value);
+            case 0 -> statement.setString(1, defaultIfEmpty(value));
             case 10, 11 -> {
-                Date date = cell.getDateCellValue();
-                statement.setTimestamp(columnIndex + 1, new Timestamp(date.getTime()));
+                if (cell != null && cell.getCellType() == CellType.NUMERIC) {
+                    Date date = cell.getDateCellValue();
+                    statement.setTimestamp(columnIndex + 1, new Timestamp(date.getTime()));
+                } else {
+                    statement.setNull(columnIndex + 1, java.sql.Types.TIMESTAMP);
+                }
             }
-            default -> statement.setString(columnIndex + 1, value);
+            default -> statement.setString(columnIndex + 1, defaultIfEmpty(value));
         }
+    }
+
+    private static String defaultIfEmpty(String value) {
+        return (value == null || value.isEmpty()) ? "Unknown" : value;
     }
 
     private static void mapRow115(PreparedStatement statement, int columnIndex, String value) throws SQLException {
@@ -200,4 +211,4 @@ public class Import2SQL {
         statement.setString(columnIndex + 1, value);
     }
 }
->>>>>>> bb500479f201c5b0b636cd9283c4f25d780a2c0f
+
